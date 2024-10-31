@@ -77,11 +77,17 @@
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="~/assets/images/men-01.jpg"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="~/assets/images/men-01.jpg" data-lightbox="image-unique-1"><i class="fa fa-eye"></i></a></li>
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -92,7 +98,13 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -123,11 +135,17 @@
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="~/assets/images/men-02.jpg"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="~/assets/images/men-02.jpg" data-lightbox="image-unique-2"><i class="fa fa-eye"></i></a></li>
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -138,7 +156,13 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -169,11 +193,17 @@
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="~/assets/images/men-03.jpg"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="~/assets/images/men-03.jpg" data-lightbox="image-unique-3"><i class="fa fa-eye"></i></a></li>
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -184,7 +214,13 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -215,11 +251,17 @@
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="~/assets/images/women-01.jpg"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="~/assets/images/women-01.jpg" data-lightbox="image-unique-4"><i class="fa fa-eye"></i></a></li>
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -230,7 +272,13 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -261,11 +309,17 @@
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="~/assets/images/women-02.jpg"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="~/assets/images/women-02.jpg" data-lightbox="image-unique-5"><i class="fa fa-eye"></i></a></li>
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -276,7 +330,13 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -307,11 +367,17 @@
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="~/assets/images/women-03.jpg"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="~/assets/images/women-03.jpg" data-lightbox="image-unique-6"><i class="fa fa-eye"></i></a></li>
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -322,7 +388,13 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -353,11 +425,17 @@
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="~/assets/images/kid-01.jpg"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="~/assets/images/kid-01.jpg" data-lightbox="image-unique-7"><i class="fa fa-eye"></i></a></li>
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -368,7 +446,13 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -399,11 +483,17 @@
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="~/assets/images/kid-02.jpg"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="~/assets/images/kid-02.jpg" data-lightbox="image-unique-8"><i class="fa fa-eye"></i></a></li>
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -414,7 +504,13 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -445,11 +541,17 @@
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="~/assets/images/kid-03.jpg"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="~/assets/images/kid-03.jpg" data-lightbox="image-unique-9"><i class="fa fa-eye"></i></a></li>
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
@@ -460,12 +562,17 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            {
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                                            }
+                                            else
+                                            {
+                                            }
                                         }
                                         else
                                         {
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-
                                         }
 
                                     </li>
