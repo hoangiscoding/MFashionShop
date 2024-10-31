@@ -45,11 +45,10 @@
                 </a>
             </th>
 
-            <th>Image</th>
             <th>
-                <i class="@sortModel.GetColumn("Code").SortIcon" aria-hidden="true"></i>
+                <i class="@sortModel.GetColumn("image").SortIcon" aria-hidden="true"></i>
                 <a asp-action="Index" asp-route-sortExpression="@sortModel.GetColumn("image").SortExpression">
-                    @Html.DisplayNameFor(model => model.Code)
+                    @Html.DisplayNameFor(model => model.ProductPhoto)
                 </a>
             </th>
 
@@ -108,12 +107,12 @@
             </td>
 
             <td>
-                    <img src="@(string.IsNullOrEmpty(item.PhotoUrl) ? "/images/noimage.png" : item.PhotoUrl)"
+                    <img src="@Url.Content("~/images/" + (string.IsNullOrEmpty(item.PhotoUrl) ? "noimage.png" : item.PhotoUrl))"
                          alt="Product Image"
                          style="width: 50px; height: auto;"
                          onerror="this.onerror=null;this.src='/images/noimage.png';" />
 
-            </td>           
+            </td>
 
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
