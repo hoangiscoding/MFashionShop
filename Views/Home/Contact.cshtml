@@ -2,13 +2,13 @@
 @inject UserManager<IdentityUser> UserManager
 
 @{
-    ViewData["Contact"] = "Liên hệ";
+    ViewData["Contact"] = "Contact";
 }
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Thời trang hiện đại">
+    <meta name="description" content="Modern Fashion">
     <meta name="author" content="FashionShop">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <!-- ***** Phần tải trang ***** -->
+    <!-- ***** Preloader ***** -->
     <div id="preloader">
         <div class="jumper">
             <div></div>
@@ -28,21 +28,21 @@
         </div>
     </div>
 
-    <!-- ***** Phần banner chính ***** -->
+    <!-- ***** Main Banner ***** -->
     <div class="page-heading about-page-heading" id="top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>Liên Hệ Với Chúng Tôi</h2>
-                        <span>Phong cách thời trang đẳng cấp &amp; sáng tạo</span>
+                        <h2>Contact Us</h2>
+                        <span>Luxury &amp; Creative Fashion Style</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ***** Phần liên hệ ***** -->
+    <!-- ***** Contact Section ***** -->
     <div class="contact-us">
         <div class="container">
             <div class="row">
@@ -53,29 +53,30 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2>Chào Bạn! Đừng Ngại Liên Hệ</h2>
-                        <span>Chú trọng vào từng chi tiết, điều làm FashionShop khác biệt.</span>
+                        <h2>Hello! Don't Hesitate to Contact Us</h2>
+                        <span>Attention to detail is what makes FashionShop unique.</span>
                     </div>
                     <form id="contact" action="" method="post">
                         <div class="row">
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <input name="name" type="text" id="name" placeholder="Tên của bạn" required="">
+                                    <input name="name" type="text" id="name" placeholder="Your Name" required="">
                                 </fieldset>
                             </div>
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <input name="email" type="text" id="email" placeholder="Email của bạn" required="">
+                                    <input name="email" type="text" id="email" placeholder="Your Email" required="">
                                 </fieldset>
                             </div>
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <textarea name="message" rows="6" id="message" placeholder="Tin nhắn của bạn" required=""></textarea>
+                                    <textarea name="message" rows="6" id="message" placeholder="Your Message" required=""></textarea>
                                 </fieldset>
                             </div>
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i> Gửi Tin Nhắn</button>
+                                    <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i> Send Message</button>
+                                </fieldset>
                             </div>
                         </div>
                     </form>
@@ -84,30 +85,30 @@
         </div>
     </div>
 
-    <!-- ***** Phần đăng ký nhận tin ***** -->
+    <!-- ***** Newsletter Subscription ***** -->
     <div class="subscribe">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="section-heading">
-                        <h2>Đăng Ký Nhận Tin Tức Để Giảm 30%</h2>
-                        <span>Chú trọng vào từng chi tiết, điều làm FashionShop khác biệt.</span>
+                        <h2>Sign Up for News and Get 30% Off</h2>
+                        <span>Attention to detail is what makes FashionShop unique.</span>
                     </div>
                     <form id="subscribe" action="" method="get">
                         <div class="row">
                             <div class="col-lg-5">
                                 <fieldset>
-                                    <input name="name" type="text" id="name" placeholder="Tên của bạn" required="">
+                                    <input name="name" type="text" id="name" placeholder="Your Name" required="">
                                 </fieldset>
                             </div>
                             <div class="col-lg-5">
                                 <fieldset>
-                                    <input name="email" type="email" id="email" placeholder="Email của bạn" required="">
+                                    <input name="email" type="email" id="email" placeholder="Your Email" required="">
                                 </fieldset>
                             </div>
                             <div class="col-lg-2">
                                 <fieldset>
-                                    <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i> Đăng Ký</button>
+                                    <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i> Subscribe</button>
                                 </fieldset>
                             </div>
                         </div>
@@ -117,16 +118,16 @@
                     <div class="row">
                         <div class="col-6">
                             <ul>
-                                <li>Địa Chỉ Cửa Hàng:<br><span>Đống Đa , Hà Nội , Việt Nam</span></li>
-                                <li>Số Điện Thoại:<br><span>010-020-0340</span></li>
-                                <li>Vị Trí Văn Phòng:<br><span>Cầu Giấy</span></li>
+                                <li>Store Address:<br><span>Dong Da, Hanoi, Vietnam</span></li>
+                                <li>Phone Number:<br><span>010-020-0340</span></li>
+                                <li>Office Location:<br><span>Cau Giay</span></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul>
-                                <li>Giờ Làm Việc:<br><span>07:30 - 21:30 Mỗi Ngày</span></li>
+                                <li>Working Hours:<br><span>07:30 AM - 09:30 PM Daily</span></li>
                                 <li>Email:<br><span>info@fashion.com</span></li>
-                                <li>Mạng Xã Hội:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
+                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">LinkedIn</a></span></li>
                             </ul>
                         </div>
                     </div>
@@ -137,11 +138,11 @@
 
     <footer>
         <div class="container">
-            <!-- Có thể thêm nội dung footer ở đây -->
+            <!-- Additional footer content can be added here -->
         </div>
     </footer>
 
-    <!-- Bootstrap và Plugins -->
+    <!-- Bootstrap and Plugins -->
     <script src="~/assets/js/popper.js"></script>
     <script src="~/assets/js/bootstrap.min.js"></script>
     <script src="~/assets/js/owl-carousel.js"></script>
@@ -155,7 +156,7 @@
     <script src="~/assets/js/lightbox.js"></script>
     <script src="~/assets/js/isotope.js"></script>
 
-    <!-- Khởi tạo Global -->
+    <!-- Initialize Global -->
     <script src="~/assets/js/custom.js"></script>
 
     <script>
