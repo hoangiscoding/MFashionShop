@@ -81,12 +81,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to access this feature</span>
                                             }
                                         }
                                         else
@@ -97,12 +99,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to make a purchase</span>
                                             }
                                         }
                                         else
@@ -110,6 +114,7 @@
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                         }
                                     </li>
+
                                 </ul>
                             </div>
                             <img src="~/assets/images/men-01.jpg" alt="">
@@ -136,12 +141,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to access this feature</span>
                                             }
                                         }
                                         else
@@ -152,12 +159,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to make a purchase</span>
                                             }
                                         }
                                         else
@@ -165,6 +174,7 @@
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                         }
                                     </li>
+
                                 </ul>
                             </div>
                             <img src="~/assets/images/men-02.jpg" alt="">
@@ -191,12 +201,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to access this feature</span>
                                             }
                                         }
                                         else
@@ -207,12 +219,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to make a purchase</span>
                                             }
                                         }
                                         else
@@ -220,6 +234,7 @@
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                         }
                                     </li>
+
                                 </ul>
                             </div>
                             <img src="~/assets/images/men-03.jpg" alt="">
@@ -247,12 +262,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to access this feature</span>
                                             }
                                         }
                                         else
@@ -263,12 +280,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to make a purchase</span>
                                             }
                                         }
                                         else
@@ -276,6 +295,7 @@
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                         }
                                     </li>
+
                                 </ul>
                             </div>
                             <img src="~/assets/images/women-01.jpg" alt="">
@@ -302,12 +322,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to access this feature</span>
                                             }
                                         }
                                         else
@@ -318,12 +340,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to make a purchase</span>
                                             }
                                         }
                                         else
@@ -331,6 +355,7 @@
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                         }
                                     </li>
+
                                 </ul>
                             </div>
                             <img src="~/assets/images/women-02.jpg" alt="">
@@ -357,12 +382,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to access this feature</span>
                                             }
                                         }
                                         else
@@ -373,12 +400,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to make a purchase</span>
                                             }
                                         }
                                         else
@@ -386,6 +415,7 @@
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                         }
                                     </li>
+
                                 </ul>
                             </div>
                             <img src="~/assets/images/women-03.jpg" alt="">
@@ -412,12 +442,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to access this feature</span>
                                             }
                                         }
                                         else
@@ -428,12 +460,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to make a purchase</span>
                                             }
                                         }
                                         else
@@ -441,6 +475,7 @@
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                         }
                                     </li>
+
                                 </ul>
                             </div>
                             <img src="~/assets/images/kid-01.jpg" alt="">
@@ -467,12 +502,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to access this feature</span>
                                             }
                                         }
                                         else
@@ -483,12 +520,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to make a purchase</span>
                                             }
                                         }
                                         else
@@ -496,6 +535,7 @@
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                         }
                                     </li>
+
                                 </ul>
                             </div>
                             <img src="~/assets/images/kid-02.jpg" alt="">
@@ -522,12 +562,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to access this feature</span>
                                             }
                                         }
                                         else
@@ -538,12 +580,14 @@
                                     <li>
                                         @if (SignInManager.IsSignedIn(User))
                                         {
-                                            @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
                                                 <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
+                                                <span>Confirm your email to make a purchase</span>
                                             }
                                         }
                                         else
@@ -551,6 +595,7 @@
                                             <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                         }
                                     </li>
+
                                 </ul>
                             </div>
                             <img src="~/assets/images/kid-03.jpg" alt="">

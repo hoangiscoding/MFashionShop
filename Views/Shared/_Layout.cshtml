@@ -35,46 +35,50 @@
                         <li class="nav-item">
                             <a class="nav-link @menuTextColor" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        @if (SignInManager.IsSignedIn(User) && UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                        @if (SignInManager.IsSignedIn(User))
                         {
-                            <li class="dropdown nav-item pr-2">
-                                <a class="nav-link dropdown-toggle @menuTextColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Masters
-                                </a>
-                                <ul class="dropdown-menu" style="background: linear-gradient(to right, #28340B, #197696);">
-                                    <li class="nav-item">
-                                        <a class="nav-link @menuTextColor" asp-area="" asp-controller="Unit" asp-action="Index">Units</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link @menuTextColor" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link @menuTextColor" asp-area="" asp-controller="Category" asp-action="Index">Categories</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link @menuTextColor" asp-area="" asp-controller="Brand" asp-action="Index">Brands</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link @menuTextColor" asp-area="" asp-controller="ProductProfile" asp-action="Index">Product Profiles</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link @menuTextColor" asp-area="" asp-controller="ProductGroup" asp-action="Index">Product Groups</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link @menuTextColor" asp-area="" asp-controller="Supplier" asp-action="Index">Suppliers</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown nav-item pr-2">
-                                <a class="nav-link dropdown-toggle @menuTextColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Transactions
-                                </a>
-                                <ul class="dropdown-menu" style="background:linear-gradient(to right,#28340B,#197696);">
-                                    <li class="nav-item">
-                                        <a class="nav-link @menuTextColor" asp-area="" asp-controller="PurchaseOrder" asp-action="Index">PurchaseOrder</a>
-                                    </li>
-                                </ul>
-                            </li>
+                            var currentUser = UserManager.GetUserAsync(User).Result;
+                            if (currentUser != null && currentUser.EmailConfirmed)
+                            {
+                                <li class="dropdown nav-item pr-2">
+                                    <a class="nav-link dropdown-toggle @menuTextColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        Masters
+                                    </a>
+                                    <ul class="dropdown-menu" style="background: linear-gradient(to right, #28340B, #197696);">
+                                        <li class="nav-item">
+                                            <a class="nav-link @menuTextColor" asp-area="" asp-controller="Unit" asp-action="Index">Units</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link @menuTextColor" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link @menuTextColor" asp-area="" asp-controller="Category" asp-action="Index">Categories</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link @menuTextColor" asp-area="" asp-controller="Brand" asp-action="Index">Brands</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link @menuTextColor" asp-area="" asp-controller="ProductProfile" asp-action="Index">Product Profiles</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link @menuTextColor" asp-area="" asp-controller="ProductGroup" asp-action="Index">Product Groups</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link @menuTextColor" asp-area="" asp-controller="Supplier" asp-action="Index">Suppliers</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown nav-item pr-2">
+                                    <a class="nav-link dropdown-toggle @menuTextColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        Transactions
+                                    </a>
+                                    <ul class="dropdown-menu" style="background:linear-gradient(to right,#28340B,#197696);">
+                                        <li class="nav-item">
+                                            <a class="nav-link @menuTextColor" asp-area="" asp-controller="PurchaseOrder" asp-action="Index">PurchaseOrder</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            }
                         }
                         <li class="nav-item">
                             <a class="nav-link @menuTextColor" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>

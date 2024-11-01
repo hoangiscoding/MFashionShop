@@ -148,36 +148,40 @@
                                     <ul>
                                         <li><a href="~/assets/images/men-01.jpg" data-lightbox="image-1"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
+                                        @if (SignInManager.IsSignedIn(User))
+                                        {
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
+                                                <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                             }
                                             else
                                             {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+                                                <span>Confirm your email to access this feature</span>
                                             }
+                                        }
+                                        else
+                                        {
+                                            <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+                                        }
                                         </li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
+                                        @if (SignInManager.IsSignedIn(User))
+                                        {
+                                            var currentUser = UserManager.GetUserAsync(User).Result;
+                                            if (currentUser != null && currentUser.EmailConfirmed)
                                             {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
+                                                <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                             }
                                             else
                                             {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+                                                <span>Confirm your email to make a purchase</span>
                                             }
+                                        }
+                                        else
+                                        {
+                                            <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+                                        }
                                         </li>
                                     </ul>
                                 </div>
@@ -201,37 +205,43 @@
                                     <ul>
                                         <li><a href="~/assets/images/men-02.jpg" data-lightbox="image-2"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+                                            <li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="assets/images/men-02.jpg" alt="">
@@ -254,37 +264,42 @@
                                     <ul>
                                         <li><a href="~/assets/images/men-03.jpg" data-lightbox="image-3"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="assets/images/men-03.jpg" alt="">
@@ -305,39 +320,43 @@
                             <div class="thumb">
                                 <div class="hover-content">
                                     <ul>
-                                        <li><a href="~/assets/images/men-01.jpg" data-lightbox="image-1"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="assets/images/men-01.jpg" alt="">
@@ -385,37 +404,42 @@
                                     <ul>
                                         <li><a href="~/assets/images/women-01.jpg" data-lightbox="image-4"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="~/assets/images/women-01.jpg" alt="">
@@ -438,37 +462,42 @@
                                     <ul>
                                         <li><a href="~/assets/images/women-02.jpg" data-lightbox="image-5"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="~/assets/images/women-02.jpg" alt="">
@@ -491,37 +520,42 @@
                                     <ul>
                                         <li><a href="~/assets/images/women-03.jpg" data-lightbox="image-6"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="~/assets/images/women-03.jpg" alt="">
@@ -544,37 +578,42 @@
                                     <ul>
                                         <li><a href="~/assets/images/women-01.jpg" data-lightbox="image-4"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="~/assets/images/women-01.jpg" alt="">
@@ -622,37 +661,42 @@
                                     <ul>
                                         <li><a href="~/assets/images/kid-01.jpg" data-lightbox="image-7"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="~/assets/images/kid-01.jpg" alt="">
@@ -675,37 +719,42 @@
                                     <ul>
                                         <li><a href="~/assets/images/kid-02.jpg" data-lightbox="image-8"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="~/assets/images/kid-02.jpg" alt="">
@@ -728,37 +777,42 @@
                                     <ul>
                                         <li><a href="~/assets/images/kid-03.jpg" data-lightbox="image-9"><i class="fa fa-eye"></i></a></li>
                                         <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
-                                            }
-                                        </li>
-                                        <li>
-                                            @if (SignInManager.IsSignedIn(User))
-                                            {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
-                                                {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
-                                                }
-                                                else
-                                                {
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
-                                            }
-                                        </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to access this feature</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+    }
+</li>
+<li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = UserManager.GetUserAsync(User).Result;
+        if (currentUser != null && currentUser.EmailConfirmed)
+        {
+            <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+        }
+        else
+        {
+            <span>Confirm your email to make a purchase</span>
+        }
+    }
+    else
+    {
+        <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+    }
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="~/assets/images/kid-03.jpg" alt="">
@@ -783,35 +837,40 @@
                                         <li>
                                             @if (SignInManager.IsSignedIn(User))
                                             {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                                var currentUser = UserManager.GetUserAsync(User).Result;
+                                                if (currentUser != null && currentUser.EmailConfirmed)
                                                 {
-                                                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
+                    <a asp-area="" asp-controller="Product" asp-action="Index"><i class="fa fa-star"></i></a>
                                                 }
                                                 else
                                                 {
+                    <span>Confirm your email to access this feature</span>
                                                 }
                                             }
                                             else
                                             {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
+            <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-star"></i></a>
                                             }
-                                        </li>
-                                        <li>
+</li>
+<li>
                                             @if (SignInManager.IsSignedIn(User))
                                             {
-                                                @if (UserManager.GetUserAsync(User).Result.EmailConfirmed)
+                                                var currentUser = UserManager.GetUserAsync(User).Result;
+                                                if (currentUser != null && currentUser.EmailConfirmed)
                                                 {
-                                                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
+                    <a asp-area="" asp-controller="PurchaseOrder" asp-action="Index"><i class="fa fa-shopping-cart"></i></a>
                                                 }
                                                 else
                                                 {
+                    <span>Confirm your email to make a purchase</span>
                                                 }
                                             }
                                             else
                                             {
-                                                <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
+            <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-shopping-cart"></i></a>
                                             }
-                                        </li>
+</li>
+
                                     </ul>
                                 </div>
                                 <img src="~/assets/images/kid-01.jpg" alt="">
