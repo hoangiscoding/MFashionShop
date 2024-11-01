@@ -204,7 +204,6 @@
                                 <div class="hover-content">
                                     <ul>
                                         <li><a href="~/assets/images/men-02.jpg" data-lightbox="image-2"><i class="fa fa-eye"></i></a></li>
-                                        <li>
                                             <li>
                                             @if (SignInManager.IsSignedIn(User))
                                             {
@@ -320,7 +319,8 @@
                             <div class="thumb">
                                 <div class="hover-content">
                                     <ul>
-                                        <li>
+                                        <li><a href="~/assets/images/men-01.jpg" data-lightbox="image-1"><i class="fa fa-eye"></i></a></li>
+                                            <li>
                                             @if (SignInManager.IsSignedIn(User))
                                             {
                                                 var currentUser = UserManager.GetUserAsync(User).Result;
