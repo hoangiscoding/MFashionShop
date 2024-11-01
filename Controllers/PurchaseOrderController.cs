@@ -191,7 +191,7 @@ namespace FashionShop.Controllers
         {
             var lstCurrencies = new List<SelectListItem>();
 
-            PaginatedList<Currency> currencies = _CurrencyRepo.GetItems("Name", SortOrder.Ascending, "AED", 1, 1000);
+            PaginatedList<Currency> currencies = _CurrencyRepo.GetItems("Name", SortOrder.Ascending, "VND", 1, 1000);
 
             lstCurrencies = currencies.Select(sp => new SelectListItem()
             {
@@ -213,7 +213,7 @@ namespace FashionShop.Controllers
         {
             var lstCurrencies = new List<SelectListItem>();
 
-            PaginatedList<Currency> currencies = _CurrencyRepo.GetItems("Name", SortOrder.Ascending, "", 1, 1000);
+            PaginatedList<Currency> currencies = _CurrencyRepo.GetItems("Name", SortOrder.Ascending, "", 1, 10000);
 
             lstCurrencies = currencies.Select(sp => new SelectListItem()
             {

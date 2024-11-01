@@ -16,7 +16,7 @@ namespace FashionShop.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(75)", maxLength: 75, nullable: false),
-                    ExchangeRate = table.Column<decimal>(type: "smallmoney", nullable: false)
+                    ExchangeRate = table.Column<decimal>(type: "decimal(18,5)", nullable: false)
                 },
                 constraints: table =>
                 {

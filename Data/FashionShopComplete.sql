@@ -179,7 +179,7 @@ CREATE TABLE [dbo].[Currencies](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [nvarchar](25) NOT NULL,
 	[Description] [nvarchar](100) NOT NULL,
-	[ExchangeRate] [money] NOT NULL,
+	[ExchangeRate] [decimal](18,5) NOT NULL,
 	[ExchangeCurrencyId] [int] NULL,
  CONSTRAINT [PK_Currencies] PRIMARY KEY CLUSTERED 
 (
@@ -217,7 +217,7 @@ CREATE TABLE [dbo].[PoHeaders](
 	[SupplierId] [int] NOT NULL,
 	[BaseCurrencyId] [int] NOT NULL,
 	[PoCurrencyId] [int] NOT NULL,
-	[ExchangeRate] [money] NOT NULL,
+	[ExchangeRate] [decimal](18,5) NOT NULL,
 	[DiscountPercent] [smallmoney] NOT NULL,
 	[QuotationNo] [nvarchar](15) NOT NULL,
 	[QuotationDate] [datetime2](7) NOT NULL,
@@ -409,11 +409,11 @@ SET IDENTITY_INSERT [dbo].[PoDetails] OFF
 GO
 SET IDENTITY_INSERT [dbo].[PoHeaders] ON 
 GO
-INSERT [dbo].[PoHeaders] ([Id], [PoNumber], [PoDate], [SupplierId], [BaseCurrencyId], [PoCurrencyId], [ExchangeRate], [DiscountPercent], [QuotationNo], [QuotationDate], [PaymentTerms], [Remarks]) VALUES (1, N'PO00001', CAST(N'2022-05-22T00:00:00.0000000' AS DateTime2), 4, 1, 1, 1.0000, 0.0000, N'Quot0001', CAST(N'2022-05-10T00:00:00.0000000' AS DateTime2), N' ', N' ')
+INSERT [dbo].[PoHeaders] ([Id], [PoNumber], [PoDate], [SupplierId], [BaseCurrencyId], [PoCurrencyId], [ExchangeRate], [DiscountPercent], [QuotationNo], [QuotationDate], [PaymentTerms], [Remarks]) VALUES (1, N'PO00001', CAST(N'2024-10-22T00:00:00.0000000' AS DateTime2), 4, 1, 1, 1.0000, 0.0000, N'Quot0001', CAST(N'2024-10-10T00:00:00.0000000' AS DateTime2), N' ', N' ')
 GO
-INSERT [dbo].[PoHeaders] ([Id], [PoNumber], [PoDate], [SupplierId], [BaseCurrencyId], [PoCurrencyId], [ExchangeRate], [DiscountPercent], [QuotationNo], [QuotationDate], [PaymentTerms], [Remarks]) VALUES (2, N'PO00002', CAST(N'2022-05-21T00:00:00.0000000' AS DateTime2), 6, 1, 1, 1.0000, 0.0000, N'Quot0002', CAST(N'2022-08-22T00:00:00.0000000' AS DateTime2), N' ', N' ')
+INSERT [dbo].[PoHeaders] ([Id], [PoNumber], [PoDate], [SupplierId], [BaseCurrencyId], [PoCurrencyId], [ExchangeRate], [DiscountPercent], [QuotationNo], [QuotationDate], [PaymentTerms], [Remarks]) VALUES (2, N'PO00002', CAST(N'2024-10-21T00:00:00.0000000' AS DateTime2), 6, 1, 1, 1.0000, 0.0000, N'Quot0002', CAST(N'2024-10-22T00:00:00.0000000' AS DateTime2), N' ', N' ')
 GO
-INSERT [dbo].[PoHeaders] ([Id], [PoNumber], [PoDate], [SupplierId], [BaseCurrencyId], [PoCurrencyId], [ExchangeRate], [DiscountPercent], [QuotationNo], [QuotationDate], [PaymentTerms], [Remarks]) VALUES (3, N'PO00003', CAST(N'2022-05-20T00:00:00.0000000' AS DateTime2), 3, 1, 3, 0.0470, 0.0000, N'Quot0003', CAST(N'2022-05-22T00:00:00.0000000' AS DateTime2), N' ', N' ')
+INSERT [dbo].[PoHeaders] ([Id], [PoNumber], [PoDate], [SupplierId], [BaseCurrencyId], [PoCurrencyId], [ExchangeRate], [DiscountPercent], [QuotationNo], [QuotationDate], [PaymentTerms], [Remarks]) VALUES (3, N'PO00003', CAST(N'2024-10-20T00:00:00.0000000' AS DateTime2), 3, 1, 3, 1.0000, 0.0000, N'Quot0003', CAST(N'2024-10-22T00:00:00.0000000' AS DateTime2), N' ', N' ')
 GO
 SET IDENTITY_INSERT [dbo].[PoHeaders] OFF
 GO

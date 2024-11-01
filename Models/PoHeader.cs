@@ -31,8 +31,8 @@
         public int PoCurrencyId { get; set; }
         public virtual Currency POCurrency { get; private set; }
 
-        [DisplayFormat(DataFormatString = "{0:0.000}", ApplyFormatInEditMode = true)]
-        [Column(TypeName = "smallmoney")]
+        [DisplayFormat(DataFormatString = "{0:0.00000}", ApplyFormatInEditMode = true)]
+        [Column(TypeName = "decimal(18,5)")]
         [Required]
         public decimal ExchangeRate { get; set; }
 
