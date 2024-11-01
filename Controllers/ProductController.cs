@@ -378,12 +378,11 @@ namespace FashionShop.Controllers
 
         private string GetUploadedFileName(Product product)
         {
-            string uniqueFileName = null;
+            string uniqueFileName = product.ProductPhoto.FileName;
 
             if (product.ProductPhoto != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "images");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + product.ProductPhoto.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {

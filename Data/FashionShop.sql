@@ -711,13 +711,3 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[Products] CHECK CONSTRAINT [FK_Products_Units_UnitId]
 GO
-
---  insert into Products (Code, Name, Description, Cost, Price, UnitId, BrandId, CategoryId, ProductGroupId, ProductProfileId, PhotoUrl)
---  values ('Fs0001', 'Clothes', 'Clothes', '300.00', '400.00', '44', '4', '11', '1', '1', 
---  'images\1.jpg' )
-
---  delete from Products where Code = 'GR0001'
-
---  insert into Products (Code,	Name,	Description,	Cost,	Price,	UnitId,	BrandId	,CategoryId	,ProductGroupId,	ProductProfileId,	PhotoUrl)
---  values
---('GR0001',	'Red Checked Shirt',	'Red Checked Shirt',	450.00,	1000.00,	'44',	'4',	'6',	'1',	'1',	'images\dfdcaab0-452c-4951-bd4b-240944c97d82_CheckedShirt.jpg')
