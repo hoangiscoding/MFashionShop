@@ -46,7 +46,7 @@ namespace FashionShop.Areas.Identity.Pages.Account
         public class InputModel
         {
 
-            [Required]            
+            [Required]
             [Display(Name = "UserName")]
             [StringLength(50)]
             public string UserName { get; set; }
@@ -78,7 +78,7 @@ namespace FashionShop.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-            
+
 
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace FashionShop.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-                   
+
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
                         return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
